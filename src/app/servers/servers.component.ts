@@ -13,12 +13,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
   addNewServer = false;
+  serverCreationStatus = 'server is not created';
 
-  constructor() { 
+  constructor() {
     setInterval(() => this.addNewServer = true, 2000);
   }
 
   ngOnInit() {
+  }
+
+  onCreateServer() {
+    this.serverCreationStatus = 'Server Created';
   }
 
 }
